@@ -1,0 +1,19 @@
+[package]
+name = "welfare-backend"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+
+rocket = { version = "0.5.1", features = [
+  "json",
+] } # Rocket framework for the web serverrocket = { version = "0.5.0-rc.2", features = ["json"] }: This line ensures that the json feature is enabled for Rocket, allowing you to use rocket::serde::json::Json for handling JSON requests and responsesiesel = { version = "2.0.0", features = ["mysql", "r2d2"] } # Diesel for ORM with MySQL support
+rocket_cors = "0.5.2" # Use the version compatible with Rocket 0.5
+serde = { version = "1.0", features = ["derive"] } # Serde for serialization
+serde_json = "1.0"
+diesel = { version = "2.0.0", features = ["mysql", "r2d2"] }
+dotenv = "0.15"
+uuid = { version = "1.1", features = ["v4"] } # UUID for unique IDs
+rocket_sync_db_pools = { version = "0.1", features = [
+  "diesel_mysql_pool",
+] } # Rocket support for Diesel

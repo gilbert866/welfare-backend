@@ -1,0 +1,4 @@
+[default.databases]
+mysql_db = { url = "mysql://root:Gamo1isking@Gilbert123@localhost:3306/balancesheetdb" }
+
+
